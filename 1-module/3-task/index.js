@@ -6,17 +6,10 @@
  * @returns {{min:number, max:number}}  объект
  */
 function getMinMax(str) {
-  let newArr =  str.match(/[-+]?[0-9]*\.?[0-9]/g)
-    .map(function(element){
-      if(parseFloat(element)){
-        return parseFloat(element);
-      } else{
-        return ' ';
-      }
-  })
-    .filter(function(element){
-      return element !== ' ';
-  });
+  let stepOne = str.replace(/[^a-zA-Z0-9!.-]/g, ' ');
+  let stepTwo = stepOne.replace(/\s+/g, ',');
+  let newArr = stepTwo.split(',');
+
   let min = Math.min(...newArr);
   let max = Math.max(...newArr);
   return {min: min, max: max};
