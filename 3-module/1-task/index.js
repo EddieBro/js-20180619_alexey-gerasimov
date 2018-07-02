@@ -5,15 +5,15 @@
  * @returns {string}
  */
 function showSalary(data, age) {
-  let result = '';
-  data.filter(function (user) {
+  let result = [];
+  data.forEach(function (user) {
     if (user.age <= age) {
-      result += `${user.name}, ${user.balance}\n`;
+      result.push(`${user.name}, ${user.balance}`);
     }
   });
-  result = result.replace(/\n$/, "")
+  //result = result.replace(/\n$/, "")
   console.log(result);
-  return result;
+  return result.join('\n');
 }
 
 
