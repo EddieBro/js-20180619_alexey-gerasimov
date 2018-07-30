@@ -4,21 +4,24 @@
     <meta charset="UTF-8">
     <title>Занятие 8: Сортируемая таблица</title>
     <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <script src="index.js"></script>
 </head>
 <body>
-    <h1>Пример минимально необходимой структуры таблицы для прохождения тестов</h1>
-    <div class="example">
-        <table>
-            <thead>
+<div class="container-fluid">
+    <div class="col-md-8">
+        <h1>Пример минимально необходимой структуры таблицы для прохождения тестов</h1>
+        <div class="table example">
+            <table>
+                <thead>
                 <tr>
                     <td>Name</td>
                     <td>Age</td>
                     <td>Salary</td>
                     <td>City</td>
                 </tr>
-            </thead>
-            <tbody>
+                </thead>
+                <tbody>
                 <tr>
                     <td>Ilia</td>
                     <td>25</td>
@@ -26,14 +29,20 @@
                     <td>Petrozavods</td>
                 </tr>
 
-            </tbody>
-        </table>
+                </tbody>
+            </table>
+        </div>
+        <h1>Результат</h1>
+        <br>
+        <div class="result">
+
+        </div>
+        <button onclick="table.sort(0)">По имени</button>
+        <button onclick="table.sort(0, true)">По имени2</button>
+        <button onclick="table.sort(2)">По зарплате</button>
     </div>
 
-    <h1>Результат</h1>
-    <div class="result">
-
-    </div>
+</div>
 
     <script>
         'use strict';
@@ -69,8 +78,5 @@
         document.querySelector('.result').appendChild(table.el);
 
     </script>
-
-    <button onclick="table.sort(0)">По имени</button>
-    <button onclick="table.sort(2)">По зарплате</button>
 </body>
 </html>
