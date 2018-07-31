@@ -168,10 +168,10 @@ function SortableTable(items) {
     let tableHead = document.createElement("thead");
     tableHead.innerHTML = `
     <tr>
-      <th>Name</th>
-      <th>Age</th>
-      <th>Salary</th>
-      <th>City</th>
+      <td>Name</td>
+      <td>Age</td>
+      <td>Salary</td>
+      <td>City</td>
     </tr>
   `;
     let tableBody = document.createElement("tbody");
